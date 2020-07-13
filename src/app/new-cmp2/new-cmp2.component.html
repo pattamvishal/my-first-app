@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row"></div>
+    <div class="col-xs-12">
+        <p>new-cmp2 works!</p>
+
+        <h3>app-new-cmp2</h3>
+
+
+        <h4> {{server}} the star {{name}} has scored {{numberofgoals}} goals </h4>
+        <h4>server is {{serverst()}}</h4>
+
+
+    </div>
+    <div class="col-xs-12">
+        <!-- <input 
+        type="text"
+        class="form-control"
+        (input)="onupdateservername($event)"> -->
+        <br>
+        <input type="text" class="form-control" [(ngModel)]="servername">
+        <br>
+
+        <br>
+        <button class="btn btn-primary" [disabled]=" !allownewserver" (click)='onCreateServer()'>dont touch</button>
+
+        <p *ngIf="serverCreated">Server is created ,name is{{servercreationstatus}}</p>
+
+        <!-- <p>{{servername}}</p> -->
+        <br>
+
+        <input type="text" class="form-control" [(ngModel)]="servername1">
+
+        <br>
+        <button class="btn btn-primary"
+        [disabled]="servername1 ===''"
+        (click)="servername1=''">thisayi peru ni</button>
+        <p>{{servername1}}</p>
+
+        <p>{{servername12}}</p>
+        <br>
+        <!-- <p [innerText]="allownewserver"></p> -->
+
+    </div>
+</div>
+
+
+<br>
